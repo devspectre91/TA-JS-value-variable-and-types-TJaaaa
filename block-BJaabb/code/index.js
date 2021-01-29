@@ -9,6 +9,9 @@ let user = prompt("Enter a value");
 alert(`Entered value is ${user}`);
 let userName = user;
 console.log(`Value of user is ${user} and value of userName is ${userName}`);
+let age = 22, isLearning = true;
+user = "John";
+console.log(`Value of user is ${user} and value of userName is ${userName}`);
 /* 2.
 Use `prompt` to take two numbers from user and store it in variable `numA` and `numB`. Create a third variable called `sum`, using `+` operator add numA and numB , store it in varible `sum` and using alert display `sum` in browser.
 */
@@ -21,7 +24,7 @@ alert(`The value of sum is ${sum}`);
 
 // 3. Complete the following code to make the output be 0 2 4 6 8 10?
 
-for (let j = 0; j <= 10; j = j + 2;) console.log(j);
+for (let j = 0; j <= 10; j = j + 2) console.log(j);
 
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
 for (let j = 9; j > 0; j = j - 1) console.log(j);
@@ -57,18 +60,11 @@ Example:
 "hello", -21; // false
 
 */
-let num1 = prompt("Enter the first value");
-if (num1 == "true" || "undefined" || "null") { alert("enter a valid value"); }
-else {
-    let num2 = prompt("Enter the second value");
-    if (num2 == "true" || "undefined" || "null") { alert("enter a valid value"); }
-    else {
+let num1 = +prompt("Enter the first number");
+let num2 = +prompt("Enter the second number");
 
-        if (num1 == num2) {
-            alert("true");
-        }
-        else {
-            alert("false");
-        }
-    }
+if (isNaN(num1) || isNaN(num2)) {
+    alert("Enter a valid number");
+} else {
+    alert((num1 === num2));
 }
