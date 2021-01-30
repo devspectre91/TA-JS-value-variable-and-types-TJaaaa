@@ -13,6 +13,20 @@ const ACCESSORY_PRICE = 9.99;
 
 var bank_balance = 303.91;
 var amount = 0;
-// your code goes here
+
+let totalPrice = 0;
+while (totalPrice < bank_balance) {
+    totalPrice = totalPrice + PHONE_PRICE;
+    if (totalPrice < SPENDING_THRESHOLD) {
+        totalPrice = totalPrice + ACCESSORY_PRICE;
+    }
+}
+amount = totalPrice * 1.08;
+alert(`Your purchase amount is $ ${amount}`);
+if (amount <= bank_balance) {
+    alert("Congrats! Your are ready to buy this order");
+} else {
+    alert("Sorry, you can't afford it!");
+}
 
 // ⛑ Answer of the above will `$334.76`.
